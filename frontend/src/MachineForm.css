@@ -1,0 +1,313 @@
+/* // import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+
+// const MachineList = () => {
+//   const [machines, setMachines] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     const fetchMachines = async () => {
+//       try {
+//         const response = await axios.get('http://localhost:5000/api/machines');
+//         setMachines(response.data);
+//         setLoading(false);
+//       } catch (error) {
+//         console.error('Error fetching machines:', error);
+//         setError('Error fetching machines. Please try again later.');
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchMachines();
+//   }, []);
+
+//   if (loading) {
+//     return <p>Loading...</p>;
+//   }
+
+//   if (error) {
+//     return <p>{error}</p>;
+//   }
+
+//   return (
+//     <div>
+//       <h2>Machine List</h2>
+//       {machines.length === 0 ? (
+//         <p>No machines found.</p>
+//       ) : (
+//         <ul>
+//           {machines.map(machine => (
+//             <li key={machine._id}>
+//               <p><strong>Hospital Name:</strong> {machine.hospitalName}</p>
+//               <p><strong>Machine Name:</strong> {machine.machineName}</p>
+//               <p><strong>Equipment Make:</strong> {machine.equipmentMake}</p>
+//             </li>
+//           ))}
+//         </ul>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default MachineList;
+
+ */
+
+/*.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+.machine-list {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.machine-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.machine-item p {
+  margin: 5px 0;
+}
+
+.machine-item button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.machine-item button:hover {
+  background-color: #c82333;
+}*/
+
+/* MachineForm.css */
+
+/*.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+button.edit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+button.edit-btn:hover {
+  background-color: #218838;
+}
+
+.machine-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.machine-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.machine-item p {
+  margin: 5px 0;
+}*/
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #FFEFEF;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #34495e;
+  font-size: 18px;
+}
+
+.form-group input {
+  width: calc(100% - 12px);
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  background-color: #ecf0f1;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #8e44ad;
+  background-color: #e8f8f5;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 10px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+button.delete-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
+
+button.edit-btn {
+  background-color: #1abc9c;
+  color: white;
+}
+
+button.edit-btn:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+.machine-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.machine-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid #2980b9;
+  border-radius: 10px;
+  background-color: #fff5e6;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.machine-item:hover {
+  background-color: #f7d6c1;
+  border-color: #e74c3c;
+}
+
+.machine-item p {
+  margin: 8px 0;
+  color: #2c3e50;
+  font-size: 17px;
+}
+
+
+
+
